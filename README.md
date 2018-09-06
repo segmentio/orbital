@@ -55,5 +55,3 @@ func (h *Harness) OrbitalSmoke(ctx context.Context, o *orbital.O) {
 	}
 }
 ```
-
-Orbital automatically incorporates timeouts on a per-test basis which are determined
