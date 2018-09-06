@@ -3,7 +3,7 @@ orbital
 
 [![Build](https://circleci.com/gh/segmentio/orbital.svg?style=shield&circle-token=d06625b898a4090cd613386530e9296a286b6c2b)](https://circleci.com/gh/segmentio/orbital)
 [![GoDoc](https://godoc.org/github.com/segmentio/orbital?status.svg)](https://godoc.org/github.com/segmentio/orbital)
-[![Go Report Card](https://goreportcard.com/badge/github.com/segmentio/orbital)](https://goreportcard.com/report/github.com/segmentio/orbital)
+[![Go Report Card](https://goreportcard.com/badge/github.com/segmentio/orbital#)](https://goreportcard.com/report/github.com/segmentio/orbital)
 [![License](https://img.shields.io/badge/license-MIT-5B74AD.svg)](https://github.com/segmentio/orbital/blob/master/LICENSE)
 
 Orbital is a test framework which enables a developer to write end to end tests
