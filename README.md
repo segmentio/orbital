@@ -11,9 +11,12 @@ just like one would writing unit tests.  We do this by effectively copying the
 `testing.T` API and registering tests to be run periodically on a configured
 schedule.
 
+This package is not yet API stable.  Use with the understanding that it might
+change as time goes on.
+
 ### motivation
 
-Writing tests should be easy.  This encludes oft-neglected end-to-end tests
+Writing tests should be easy.  This includes oft-neglected end-to-end tests
 which provide arguably the most value.  End to end tests can be used for
 functional verification before a release, alerts when your site isn't behaving
 correctly, or simply just providing metrics about your site or service.
