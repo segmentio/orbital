@@ -28,7 +28,7 @@ func init() {
 }
 
 func TestOrbital(t *testing.T) {
-	DefaultService.Start()
+	DefaultService.Run()
 	time.Sleep(2 * time.Millisecond)
 	DefaultService.Close()
 }
