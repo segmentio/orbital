@@ -56,7 +56,7 @@ func (s *RouteLogger) Sent(key string) error {
 	if _, ok := s.rc[key]; ok {
 		return errors.Errorf("key %s already sent", key)
 	}
-	// Channel buffer 1 prevents the race betweeen recieving an event on the
+	// Channel buffer 1 prevents the race between receiving an event on the
 	// webhook and calling `Wait`.  Otherwise, the event would be dropped in
 	// the select statement for Record
 	s.rc[key] = make(chan Request, 1)

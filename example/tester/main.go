@@ -48,7 +48,7 @@ func main() {
 		orbital.WithStats(stats.DefaultEngine),
 		orbital.WithTimeout(5*time.Second),
 	)
-	// Manages hooking events back into the test.  The tests must knoow to wait
+	// Manages hooking events back into the test.  The tests must know to wait
 	// on this ID
 	rl := webhook.NewRouteLogger(func(r webhook.Request) string {
 		return gjson.Get(r.Body, "id").Str

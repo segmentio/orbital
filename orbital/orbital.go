@@ -39,13 +39,13 @@ type O struct {
 	mu     sync.Mutex
 }
 
-// Error is equivlant to Log followed by Fail
+// Error is equivalent to Log followed by Fail
 func (o *O) Error(args ...interface{}) {
 	o.log(fmt.Sprintln(args...))
 	o.Fail()
 }
 
-// Errorf is equivlant to Logf followed by Fail
+// Errorf is equivalent to Logf followed by Fail
 func (o *O) Errorf(fstr string, args ...interface{}) {
 	o.log(fmt.Sprintf(fstr, args...))
 	o.Fail()

@@ -25,7 +25,7 @@ correctly, or simply just providing metrics about your site or service.
 
 The goal is to make writing end-to-end tests simple and to take the effort out
 of building these systems.  To enable that, a number of packages are provided
-to aid in this effort.  The webhook package provides a simple way to receieve
+to aid in this effort.  The webhook package provides a simple way to receive
 notifications of received events.  With those packages together, we can write
 elegant tests like the following.
 
@@ -40,7 +40,7 @@ func (h *Harness) OrbitalSmoke(ctx context.Context, o *orbital.O) {
 	// Send request to API for handling
 	id := s.send([]byte(tmpl))
 
-	// tell the webhook we're waiting to recieve this message
+	// tell the webhook we're waiting to receive this message
 	err := h.RouteLogger.Sent(id)
 	if err != nil {
 		o.Errorf("%{error}v", err)
