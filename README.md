@@ -30,7 +30,7 @@ notifications of received events.  With those packages together, we can write
 elegant tests like the following.
 
 
-```
+```go
 type Harness struct {
 	RouteLogger *webhook.RouteLogger
 }
