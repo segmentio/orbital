@@ -15,7 +15,7 @@ import (
 // registration.
 type Service struct {
 	// list of tests to run
-	tests   map[string]TestCase
+	tests   []TestCase
 	stats   *stats.Engine
 	mu      sync.Mutex
 	started bool
@@ -45,7 +45,7 @@ func New(opts ...func(*Service)) *Service {
 	s := &Service{
 		w:              os.Stderr,
 		done:           make(chan struct{}),
-		tests:          make(map[string]TestCase),
+		tests:          make([]TestCase, 0),
 		defaultTimeout: 10 * time.Minute,
 	}
 	for _, o := range opts {
@@ -64,7 +64,7 @@ func Register(tc TestCase) {
 func (s *Service) Register(tc TestCase) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
-	s.tests[tc.Name] = tc
+	s.tests = append(s.tests, tc)
 }
 
 func (s *Service) Run() {
