@@ -7,10 +7,6 @@ ifndef Q
 GOTESTFLAGS += -v
 endif
 
-.PHONY: deps
-deps:
-	$Qdep ensure
-
 .PHONY: clean
 clean:
 	$Qrm -rf vendor/ && git checkout ./vendor && dep ensure
