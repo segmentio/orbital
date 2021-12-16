@@ -2,6 +2,7 @@ package webhook
 
 import (
 	"context"
+	"fmt"
 	"reflect"
 	"sync"
 
@@ -30,6 +31,7 @@ func NewRouteLogger(key func(Request) string) *RouteLogger {
 }
 
 func (s *RouteLogger) Record(r Request) {
+	fmt.Printf("Debug - Got event %+v", r)
 	events.Debug("%+v", r)
 	s.mu.Lock()
 	defer s.mu.Unlock()
