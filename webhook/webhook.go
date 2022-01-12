@@ -25,7 +25,7 @@ func New(c Config, opts ...func(*Webhook)) *Webhook {
 }
 
 func (h *Webhook) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	rdr := http.MaxBytesReader(w, r.Body, 30000)
+	rdr := http.MaxBytesReader(w, r.Body, 1024*1024)
 	defer rdr.Close()
 
 	bs, err := ioutil.ReadAll(rdr)
